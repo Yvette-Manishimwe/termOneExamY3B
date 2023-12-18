@@ -28,4 +28,31 @@ public class MathControllerTest {
 
         assertEquals(200, response.getStatusCode().value());
     }
+
+    @Test
+    public void doMathOperation_Success_Subtraction(){
+        DoMathRequestDto dto = new DoMathRequestDto(10, 5, "-");
+
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/do_math",dto,ApiResponse.class);
+
+        assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void doMathOperation_Success_Multiplication(){
+        DoMathRequestDto dto = new DoMathRequestDto(4, 6, "*");
+
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/do_math",dto,ApiResponse.class);
+
+        assertEquals(200, response.getStatusCodeValue());
+    }
+
+    @Test
+    public void doMathOperation_Success_Division(){
+        DoMathRequestDto dto = new DoMathRequestDto(20, 5, "/");
+
+        ResponseEntity<ApiResponse> response = this.restTemplate.postForEntity("/api/do_math",dto,ApiResponse.class);
+
+        assertEquals(200, response.getStatusCodeValue());
+    }
 }
