@@ -8,21 +8,21 @@ import rca.termOneExam.v1.services.IMathOperator;
 public class MathOperatorImpl implements IMathOperator {
 
     @Override
-    public double doMath(double operand1, double operand2, String operation) throws InvalidOperationException {
-        if ("/".equals(operation) && operand2 == (double) 0) {
+    public double doMath(double num1, double num2, String operation) throws InvalidOperationException {
+        if ("/".equals(operation) && num2 == (double) 0) {
             throw new InvalidOperationException("Cannot divide by 0");
         }
 
         switch (operation) {
 
                 case "*":
-                    return operand1 * operand2;
+                    return num1 * num2;
                 case "/":
-                    return operand1 / operand2;
+                    return num1 / num2;
                 case "+":
-                    return operand1 + operand2;
+                    return num1 + num2;
                 case "-":
-                    return operand1 - operand2;
+                    return num1 - num2;
                 default:
                     throw new RuntimeException("Unknown operation");
             }

@@ -18,6 +18,6 @@ public class MathController {
 
     @PostMapping
     public ResponseEntity<ApiResponse> create(@RequestBody DoMathRequestDto dto) throws InvalidOperationException {
-        return ResponseEntity.ok(ApiResponse.success(mathOperatorImpl.doMath(dto.getOperand1(), dto.getOperand2(), dto.getOperation())));
+        return ResponseEntity.ok(ApiResponse.success(mathOperatorImpl.doMath(dto.getNum1(), dto.getNum2(), dto.getOperation())));
     }
 }

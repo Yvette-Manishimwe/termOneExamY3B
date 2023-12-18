@@ -5,31 +5,31 @@ import lombok.Data;
 @Data
 
 public class DoMathRequestDto {
-    private double operand1;
-    private double operand2;
+    private double num1;
+    private double num2;
     private String operation;
 
-    public DoMathRequestDto(double operand1, double operand2, String operation) {
-        this.operand1 = operand1;
-        this.operand2 = operand2;
+    public DoMathRequestDto(double num1, double num2, String operation) {
+        this.num1 = num1;
+        this.num2 = num2;
         this.operation = operation;
     }
 
 
-    public double getOperand1() {
-        return operand1;
+    public double getNum1() {
+        return num1;
     }
 
-    public void setOperand1(double operand1) {
-        this.operand1 = operand1;
+    public void setNum1(double operand1) {
+        this.num1 = num1;
     }
 
-    public double getOperand2() {
-        return operand2;
+    public double getNum2() {
+        return num2;
     }
 
-    public void setOperand2(double operand2) {
-        this.operand2 = operand2;
+    public void setNUm2(double operand2) {
+        this.num2 = num2;
     }
 
     public String getOperation() {

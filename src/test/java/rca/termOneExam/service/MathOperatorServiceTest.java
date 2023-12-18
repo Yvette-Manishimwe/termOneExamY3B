@@ -30,7 +30,6 @@ public class MathOperatorServiceTest {
         double operator2 = 9;
         String operation = "+";
 
-        // Stubbing behavior for mathOperatorImpl.doMath()
         when(mathOperator.doMath(operator1, operator2, operation)).thenReturn(operator1 + operator2);
 
         double actualMathOperator = mathOperatorService.doMath(operator1, operator2, operation);
@@ -44,7 +43,6 @@ public class MathOperatorServiceTest {
         double operator2 = 4;
         String operation = "-";
 
-        // Stubbing behavior for mathOperatorImpl.doMath()
         when(mathOperator.doMath(operator1, operator2, operation)).thenReturn(operator1 - operator2);
 
         double actualMathOperator = mathOperatorService.doMath(operator1, operator2, operation);
@@ -58,7 +56,7 @@ public class MathOperatorServiceTest {
         double operator2 = 9;
         String operation = "*";
 
-        // Stubbing behavior for mathOperatorImpl.doMath()
+
         when(mathOperator.doMath(operator1, operator2, operation)).thenReturn(operator1 * operator2);
 
         double actualMathOperator = mathOperatorService.doMath(operator1, operator2, operation);
