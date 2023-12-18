@@ -112,7 +112,7 @@ public class MathOperatorServiceTest {
     @Test
     public void testCalculatorService_EndToEnd() throws InvalidOperationException {
 
-        MathOperatorImpl mathOperator = new MathOperatorImpl();
+
 
 
         double resultAddition = mathOperator.doMath(5, 3, "+");
