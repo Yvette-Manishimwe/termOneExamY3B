@@ -110,6 +110,27 @@ public class MathOperatorServiceTest {
         assertThrows(InvalidOperationException.class, () -> mathOperatorService.doMath(10, 0, "/"));
     }
 
+    //End-to-End Testing
+    @Test
+    public void testCalculatorService_EndToEnd() throws InvalidOperationException {
 
+        MathOperatorImpl mathOperator = new MathOperatorImpl();
+
+
+        double resultAddition = mathOperator.doMath(5, 3, "+");
+        assertEquals(8, resultAddition, 0.001);
+
+
+        double resultSubtraction = mathOperator.doMath(9, 4, "-");
+        assertEquals(5, resultSubtraction, 0.001);
+
+
+        double resultMultiplication = mathOperator.doMath(4, 3, "*");
+        assertEquals(12, resultMultiplication, 0.001);
+
+
+        double resultDivision = mathOperator.doMath(10, 2, "/");
+        assertEquals(5, resultDivision, 0.001);
+    }
 
 }
